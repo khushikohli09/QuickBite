@@ -1,0 +1,121 @@
+/* =========================
+   Wrapper
+========================= */
+.all-restaurants-wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Page Heading */
+.all-restaurants-wrapper h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ff416c;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   Restaurant Cards Grid
+========================= */
+.restaurant-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* =========================
+   Individual Restaurant Card
+========================= */
+.restaurant-card {
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Restaurant Image */
+.restaurant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #ff416c;
+}
+
+/* Restaurant Name */
+.restaurant-card h2 {
+  font-size: 1.4rem;
+  color: #ff4b2b;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Restaurant Category */
+.restaurant-card p {
+  color: #ff416c;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* View Menu Button */
+.restaurant-card button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  .restaurant-card {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-card {
+    max-width: 90%;
+  }
+
+  .restaurant-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .restaurant-card img {
+    height: 130px;
+  }
+}

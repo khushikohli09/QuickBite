@@ -1,0 +1,101 @@
+.restaurants-list {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.restaurants-list h1 {
+  color: #ff416c;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Column-wise restaurant cards */
+.restaurant-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Individual card */
+.restaurant-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Restaurant Image */
+.restaurant-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff416c;
+  margin-bottom: 15px;
+}
+
+/* Restaurant Name */
+.restaurant-card h2 {
+  font-size: 1.8rem;
+  color: #ff4b2b;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* View Items Button */
+.restaurant-card button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* No restaurants message */
+.restaurants-list p {
+  color: #999;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .restaurants-list {
+    max-width: 90%;
+  }
+
+  .restaurant-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .restaurant-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-card button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,131 @@
+/* Admin Dashboard Container */
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.admin-dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-dashboard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Restaurant List Container */
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Restaurant Card */
+.restaurant-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Restaurant Image */
+.restaurant-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Restaurant Details */
+.restaurant-details {
+  padding: 1rem;
+}
+
+.restaurant-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.restaurant-details p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Order Badge */
+.restaurant-details p strong {
+  color: #000;
+}
+
+/* Buttons Container */
+.restaurant-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.featured-btn,
+.delete-btn {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.featured-btn.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.featured-btn:not(.active) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.featured-btn:hover {
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .restaurant-actions {
+    flex-direction: column;
+  }
+
+  .featured-btn,
+  .delete-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,66 @@
+/* QuickBite themed Order Success page */
+
+.success-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.success-page h1 {
+  font-size: 36px;
+  color: #ff416c;
+  margin-bottom: 20px;
+}
+
+.success-page p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.success-page strong {
+  color: #ff416c;
+}
+
+.success-page button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.success-page button:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .success-page {
+    margin: 30px 15px;
+    padding: 25px 15px;
+  }
+
+  .success-page h1 {
+    font-size: 28px;
+  }
+
+  .success-page p {
+    font-size: 16px;
+  }
+
+  .success-page button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

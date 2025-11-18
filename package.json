@@ -1,0 +1,14 @@
+{
+  "name": "quickbite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start-all": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix quickbite-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}

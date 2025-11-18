@@ -1,0 +1,184 @@
+/* =========================
+   Menu Items Grid
+========================= */
+.menu-items-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* =========================
+   Individual Menu Card
+========================= */
+.menu-card,
+.menu-item-card {
+  width: 230px;
+  height: 340px; /* fixed height */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover,
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   Menu Image
+========================= */
+.menu-card img,
+.menu-item-image {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   Menu Name
+========================= */
+.menu-card h4,
+.menu-item-card h4 {
+  margin: 8px 0 4px 0;
+  font-size: 16px;
+  color: #ff416c;
+  font-weight: 600;
+}
+
+/* =========================
+   Description & Price
+========================= */
+.menu-card p,
+.menu-item-card p {
+  margin: 3px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.menu-card p:last-child,
+.menu-item-card p:last-child {
+  font-weight: 600;
+  color: #ff4b2b;
+}
+
+/* =========================
+   Buttons Container
+========================= */
+/* =========================
+   Buttons Container
+========================= */
+.menu-card-buttons,
+.menu-item-buttons {
+  display: flex;
+  gap: 10px;       /* thoda zyada gap for clarity */
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px; /* auto margin replaced with fixed spacing */
+}
+
+/* =========================
+   Vendor Buttons
+========================= */
+.edit-btn,
+.delete-btn {
+  flex: 0 1 48%;   /* buttons take roughly half width each */
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+.delete-btn {
+  background: linear-gradient(90deg, #dc3545, #ff4b2b);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #dc3545);
+}
+
+/* =========================
+   User Buttons (Add to Cart & Checkout)
+========================= */
+.add-cart-btn,
+.order-now-btn {
+  flex: 0 1 48%;   /* same width as vendor buttons for consistency */
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.add-cart-btn {
+  background: linear-gradient(90deg, #1db954, #1ed760);
+}
+
+.add-cart-btn:hover {
+  background: linear-gradient(90deg, #1ed760, #1db954);
+}
+
+.order-now-btn {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.order-now-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .menu-card,
+  .menu-item-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .menu-card img,
+  .menu-item-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .menu-card-buttons button,
+  .menu-item-buttons button,
+  .add-cart-btn,
+  .order-now-btn {
+    flex: 1 1 100%;  /* stack vertically on mobile */
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .menu-card-buttons,
+  .menu-item-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
